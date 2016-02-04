@@ -1,0 +1,23 @@
+require 'active_support/all'
+
+num = 2
+f = 1.0
+string = "hello"
+sym = :symbol
+
+array = [1,2,3,4]
+
+hash = {
+  1 => "One",
+  2 => "Two",
+  3 => "Three",
+  4 => "Four"
+}
+
+json_string = '{"1": "one", "2": "Two", "3": "Three" , "4": "Four"  }'
+
+parsed = ActiveSupport::JSON.decode(json_string)
+puts parsed.inspect
+
+puts parsed[1].inspect
+puts hash[1].inspect
