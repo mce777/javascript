@@ -12,9 +12,9 @@ function Dog(breed, age) {
 /////////////////////////////
 
 function Person(name,age) {
-  this.name = name;
-  this.age = age;
-  this.species = "Homo Sapiens";
+  this.name = name,
+  this.age = age,
+  this.species = "Homo Sapiens"
 }
 
 var sally = new Person("Sally Bowles", 39);
