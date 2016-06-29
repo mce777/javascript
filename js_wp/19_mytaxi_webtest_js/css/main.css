@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: 20px;
+  position: relative;
+  top: .25em; }
+
+h2 {
+  color: #5c5c5c; }
+
+p {
+  margin-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5c5c5c; }
+
+.linkfont {
+  font-family: "Open Sans", sans-serif;
+  color: white; }
+
+.logo {
+  margin-top: -5px; }
+
+.navbar {
+  background-color: #4a4a4a;
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom: 0; }
+
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+    position: relative;
+    top: auto; }
+
+  .navbar-collapse {
+    max-height: none; }
+
+  body {
+    margin: 0; } }
+#map {
+  height: 500px;
+  width: auto;
+  padding-top: 0px; }
+
+.mainTable {
+  margin: auto;
+  width: 80%;
+  line-height: 1.4;
+  box-shadow: 0px 1px 2px #878787;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600; }
+  .mainTable td, .mainTable th {
+    border: 1px solid #b0b0b0;
+    padding: 10px;
+    color: #5c5c5c; }
+  .mainTable th {
+    font-size: 30px;
+    background-color: #e3e3e3; }
+
+/*# sourceMappingURL=main.css.map */

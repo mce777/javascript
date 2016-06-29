@@ -1,0 +1,12 @@
+{
+  "name": "web-test",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "http://mytaxi.com",
+  "private": true,
+  "devDependencies": {
+    "bower": "^1.5.3",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0"
+  }
+}

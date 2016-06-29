@@ -1,0 +1,62 @@
+<html>
+    <head>
+      <title>maptest</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- css -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+
+      <!-- JavaScript -->
+      <script src="js/jquery-1.11.2.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script src="js/app.js"></script>
+      <script src="js/map.js"></script>
+    </head>
+
+    <body><a name="top"></a>
+      <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#top"><img src="img/logo.svg" class="logo"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#table"><span class="linkfont">Car List</span></a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      </header>
+
+      <div id="map"></div>
+      <script async defer
+              src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+      <br>
+      <div class="col-xs-8 col-xs-offset-2">
+        <h2>mytaxi JavaScript app</h2>
+        <p>Here is the JavaScript app. Check out the <strong>read.me</strong> file for more detailed information about what I did, what resources I used, etc. Thanks for taking the time to check it out.</p>
+      </div>
+
+      <!-- loading list of cars -->
+      <a name="table"></a>
+      <div id="list"></div>
+
+      <br>
+      <div class="col-xs-10 col-xs-offset-1">
+        <a href="#top">Back to top</a>
+      </div>
+      <br><br><br>
+    </body>
+
+</html>

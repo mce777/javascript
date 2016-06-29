@@ -1,0 +1,20 @@
+.navbar {
+  background-color: rgba(74, 74, 74, 1);
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-fixed-top {
+        position:relative;
+        top: auto;
+    }
+    .navbar-collapse {
+        max-height: none;
+    }
+    body {
+        margin: 0;
+    }
+}
