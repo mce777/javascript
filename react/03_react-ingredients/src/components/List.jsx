@@ -10,3 +10,5 @@ var List = React.createClass({
         return (<ul>{this.props.items.map(createItem)}</ul>);
     }
 });
+
+module.exports = List;
