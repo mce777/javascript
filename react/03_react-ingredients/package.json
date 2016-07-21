@@ -1,27 +1,18 @@
 {
-  "name": "react-skeleton",
+  "name": "02_react-skl",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devslopes/react-skeleton.git"
+    "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/devslopes/react-skeleton/issues"
-  },
-  "homepage": "https://github.com/devslopes/react-skeleton#readme",
   "dependencies": {
-    "babel-preset-react": "^6.1.18",
-    "babelify": "^7.2.0",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "watchify": "^3.6.1"
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "watchify": "^3.7.0"
   }
 }

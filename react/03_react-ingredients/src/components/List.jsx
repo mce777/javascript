@@ -1,15 +1,19 @@
 var React = require('react');
+
+// use dot slash './' to import non-npm modules
+// you need jsx extention cuz otherwise it's looking for normal js file
 var ListItem = require('./ListItem.jsx');
 
+var ingredients = [{"id":1,"text":"ham"}, {"id":2,"text":"cheese"}, {"id":3,"text":"potatoes"}];
+
 var List = React.createClass({
-    render: function() {
+  render: function() {
+    var listItems = ingredients.map(function(item) {
+      return <ListItem key={item.id} ingredient={item.text} />;
+    });
 
-        var createItem = function(text, index) {
-            return <ListItem key={index + text} text={text} />;
-        };
-
-        return (<ul>{this.props.items.map(createItem)}</ul>);
-    }
+    return (<ul>{listItems}</ul>);
+  }
 });
-
+//test
 module.exports = List;
