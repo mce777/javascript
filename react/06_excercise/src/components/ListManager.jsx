@@ -8,15 +8,7 @@ var ListManager = React.createClass({
     onChange: function (e) {
         this.setState({newItemText: e.target.value});
     },
-    // handleSubmit: function(e) {
-    //     e.preventDefault();     //prevents onClick from being triggered
-    //
-    //     var currentItems = this.state.items;
-    //
-    //     currentItems.push(this.state.newItemText);
-    //
-    //     this.setState({items: currentItems, newItemText:''});
-    // },
+
     render: function () {
 
         var divStyle = {
@@ -34,7 +26,7 @@ var ListManager = React.createClass({
         return (
             <div style={divStyle} className="col-sm-4">
                 <div className="panel panel-default">
-                    <div style={headingStyle} className="panel-heading">
+                    <div style={headingStyle} className="panel-body text-muted">
                         <h3>{this.props.title}</h3>
                         <h5>{this.props.text}</h5>
                     </div>

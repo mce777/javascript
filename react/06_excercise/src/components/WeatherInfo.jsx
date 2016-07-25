@@ -1,7 +1,7 @@
 var React = require('react');
 var List = require('./List.jsx');
 
-var ListManager = React.createClass({
+var WeatherInfo = React.createClass({
     getInitialState: function() {
         return {items: [], newItemText:''};
     },
@@ -26,8 +26,8 @@ var ListManager = React.createClass({
         return (
             <div style={divStyle} className="col-sm-12">
                 <div className="panel panel-default">
-                    <div style={headingStyle} className="panel-heading">
-                        <h3>{this.props.title}</h3>
+                    <div style={headingStyle} className="panel-body text1 al">
+                        <h1>{this.props.title}</h1>
                         <h5>{this.props.text}</h5>
                     </div>
 
@@ -38,4 +38,4 @@ var ListManager = React.createClass({
     }
 });
 
-module.exports = ListManager;
+module.exports = WeatherInfo;
