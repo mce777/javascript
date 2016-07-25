@@ -20705,7 +20705,7 @@ ReactDOM.render(React.createElement(ListManager, { title: '20', text: 'new follo
 ReactDOM.render(React.createElement(ListManager, { title: '$1250', text: 'average income', headingColor: '#ffffff' }), document.getElementById('todo'));
 ReactDOM.render(React.createElement(ListManager, { title: '$75,000', text: 'yearly income goal', headingColor: '#ffffff' }), document.getElementById('christmas'));
 
-ReactDOM.render(React.createElement(BigInfo, { title: 'Big Info', text: 'random description', xprop: 'test', headingColor: '#ff9900' }), document.getElementById('aone'));
+ReactDOM.render(React.createElement(BigInfo, { title: '15080', text: 'Shot Views', xprop: 'test', headingColor: '#ff9900' }), document.getElementById('aone'));
 ReactDOM.render(React.createElement(BigInfo, { title: 'More Big Info', text: 'random description' }), document.getElementById('mbo'));
 
 ReactDOM.render(React.createElement(WeatherInfo, { title: '18', text: 'Paris', headingColor: '#ff9900' }), document.getElementById('weather'));

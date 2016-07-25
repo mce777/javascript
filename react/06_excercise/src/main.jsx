@@ -10,7 +10,7 @@ ReactDOM.render(<ListManager title="20" text="new followers" headingColor="#ffff
 ReactDOM.render(<ListManager title="$1250" text="average income" headingColor="#ffffff"/>, document.getElementById('todo'));
 ReactDOM.render(<ListManager title="$75,000" text="yearly income goal" headingColor="#ffffff"/>, document.getElementById('christmas'));
 
-ReactDOM.render(<BigInfo title="Big Info" text="random description" xprop="test" headingColor="#ff9900"/>, document.getElementById('aone'));
+ReactDOM.render(<BigInfo title="15080" text="Shot Views" xprop="test" headingColor="#ff9900"/>, document.getElementById('aone'));
 ReactDOM.render(<BigInfo title="More Big Info" text="random description"/>, document.getElementById('mbo'));
 
 ReactDOM.render(<WeatherInfo title="18" text="Paris" headingColor="#ff9900"/>, document.getElementById('weather'));
