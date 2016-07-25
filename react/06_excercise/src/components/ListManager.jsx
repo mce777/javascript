@@ -1,5 +1,5 @@
 var React = require('react');
-var List = require('./List.jsx')
+var List = require('./List.jsx');
 
 var ListManager = React.createClass({
     getInitialState: function() {
@@ -33,7 +33,7 @@ var ListManager = React.createClass({
 
         return (
             <div style={divStyle} className="col-sm-4">
-                <div className="panel panel-primary">
+                <div className="panel panel-default">
                     <div style={headingStyle} className="panel-heading">
                         <h3>{this.props.title}</h3>
                         <h5>{this.props.text}</h5>

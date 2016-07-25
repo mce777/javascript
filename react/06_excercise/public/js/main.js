@@ -20424,8 +20424,8 @@ module.exports = require('./lib/React');
 var React = require('react');
 var List = require('./List.jsx');
 
-var ListManager = React.createClass({
-    displayName: 'ListManager',
+var BigInfo = React.createClass({
+    displayName: 'BigInfo',
 
     getInitialState: function () {
         return { items: [], newItemText: '' };
@@ -20433,15 +20433,7 @@ var ListManager = React.createClass({
     onChange: function (e) {
         this.setState({ newItemText: e.target.value });
     },
-    // handleSubmit: function(e) {
-    //     e.preventDefault();     //prevents onClick from being triggered
-    //
-    //     var currentItems = this.state.items;
-    //
-    //     currentItems.push(this.state.newItemText);
-    //
-    //     this.setState({items: currentItems, newItemText:''});
-    // },
+
     render: function () {
 
         var divStyle = {
@@ -20459,10 +20451,11 @@ var ListManager = React.createClass({
             { style: divStyle, className: 'col-sm-12' },
             React.createElement(
                 'div',
-                { className: 'panel panel-primary' },
+                { className: 'panel panel-default' },
+                React.createElement('div', { style: headingStyle, className: 'panel-heading myheight' }),
                 React.createElement(
                     'div',
-                    { style: headingStyle, className: 'panel-heading' },
+                    { className: 'panel-body' },
                     React.createElement(
                         'h3',
                         null,
@@ -20479,7 +20472,7 @@ var ListManager = React.createClass({
     }
 });
 
-module.exports = ListManager;
+module.exports = BigInfo;
 
 },{"./List.jsx":173,"react":171}],173:[function(require,module,exports){
 var React = require('react');
@@ -20563,7 +20556,7 @@ var ListManager = React.createClass({
             { style: divStyle, className: 'col-sm-4' },
             React.createElement(
                 'div',
-                { className: 'panel panel-primary' },
+                { className: 'panel panel-default' },
                 React.createElement(
                     'div',
                     { style: headingStyle, className: 'panel-heading' },
@@ -20587,15 +20580,138 @@ module.exports = ListManager;
 
 },{"./List.jsx":173,"react":171}],176:[function(require,module,exports){
 var React = require('react');
+var List = require('./List.jsx');
+
+var ListManager = React.createClass({
+    displayName: 'ListManager',
+
+    getInitialState: function () {
+        return { items: [], newItemText: '' };
+    },
+    onChange: function (e) {
+        this.setState({ newItemText: e.target.value });
+    },
+    // handleSubmit: function(e) {
+    //     e.preventDefault();     //prevents onClick from being triggered
+    //
+    //     var currentItems = this.state.items;
+    //
+    //     currentItems.push(this.state.newItemText);
+    //
+    //     this.setState({items: currentItems, newItemText:''});
+    // },
+    render: function () {
+
+        var divStyle = {
+            marginTop: 10
+        };
+
+        var headingStyle = {};
+
+        if (this.props.headingColor) {
+            headingStyle.background = this.props.headingColor;
+        }
+
+        return React.createElement(
+            'div',
+            { style: divStyle, className: 'col-sm-12' },
+            React.createElement(
+                'div',
+                { className: 'panel panel-default' },
+                React.createElement(
+                    'div',
+                    { style: headingStyle, className: 'panel-heading' },
+                    React.createElement(
+                        'h5',
+                        null,
+                        this.props.text
+                    ),
+                    React.createElement(
+                        'h3',
+                        null,
+                        this.props.title
+                    )
+                ),
+                React.createElement('div', { className: 'panel-body' })
+            )
+        );
+    }
+});
+
+module.exports = ListManager;
+
+},{"./List.jsx":173,"react":171}],177:[function(require,module,exports){
+var React = require('react');
+var List = require('./List.jsx');
+
+var ListManager = React.createClass({
+    displayName: 'ListManager',
+
+    getInitialState: function () {
+        return { items: [], newItemText: '' };
+    },
+    onChange: function (e) {
+        this.setState({ newItemText: e.target.value });
+    },
+
+    render: function () {
+
+        var divStyle = {
+            marginTop: 10
+        };
+
+        var headingStyle = {};
+
+        if (this.props.headingColor) {
+            headingStyle.background = this.props.headingColor;
+        }
+
+        return React.createElement(
+            'div',
+            { style: divStyle, className: 'col-sm-12' },
+            React.createElement(
+                'div',
+                { className: 'panel panel-default' },
+                React.createElement(
+                    'div',
+                    { style: headingStyle, className: 'panel-heading' },
+                    React.createElement(
+                        'h3',
+                        null,
+                        this.props.title
+                    ),
+                    React.createElement(
+                        'h5',
+                        null,
+                        this.props.text
+                    )
+                )
+            )
+        );
+    }
+});
+
+module.exports = ListManager;
+
+},{"./List.jsx":173,"react":171}],178:[function(require,module,exports){
+var React = require('react');
 var ReactDOM = require('react-dom');
 var ListManager = require('./components/ListManager.jsx');
 var BigInfo = require('./components/BigInfo.jsx');
+var WeatherInfo = require('./components/WeatherInfo.jsx');
+var LittleInfo = require('./components/LittleInfo.jsx');
 
-ReactDOM.render(React.createElement(ListManager, { title: '20', text: 'random description' }), document.getElementById('ingredients'));
-ReactDOM.render(React.createElement(ListManager, { title: 'ToDo', text: 'random description' }), document.getElementById('todo'));
-ReactDOM.render(React.createElement(ListManager, { title: 'Christmas', text: 'random description', headingColor: '#b31217' }), document.getElementById('christmas'));
-ReactDOM.render(React.createElement(ListManager, { title: 'ToDo', text: 'random description' }), document.getElementById('another'));
-ReactDOM.render(React.createElement(BigInfo, { title: 'Big Info', text: 'random description' }), document.getElementById('aone'));
+ReactDOM.render(React.createElement(ListManager, { title: '20', text: 'new followers', headingColor: '#ffffff' }), document.getElementById('ingredients'));
+ReactDOM.render(React.createElement(ListManager, { title: '$1250', text: 'average income', headingColor: '#ffffff' }), document.getElementById('todo'));
+ReactDOM.render(React.createElement(ListManager, { title: '$75,000', text: 'yearly income goal', headingColor: '#ffffff' }), document.getElementById('christmas'));
+
+ReactDOM.render(React.createElement(BigInfo, { title: 'Big Info', text: 'random description', xprop: 'test', headingColor: '#ff9900' }), document.getElementById('aone'));
 ReactDOM.render(React.createElement(BigInfo, { title: 'More Big Info', text: 'random description' }), document.getElementById('mbo'));
 
-},{"./components/BigInfo.jsx":172,"./components/ListManager.jsx":175,"react":171,"react-dom":29}]},{},[176]);
+ReactDOM.render(React.createElement(WeatherInfo, { title: '18', text: 'Paris', headingColor: '#ff9900' }), document.getElementById('weather'));
+ReactDOM.render(React.createElement(LittleInfo, { title: '1.5k', text: 'New visitors', headingColor: '#0066ff' }), document.getElementById('little1'));
+ReactDOM.render(React.createElement(LittleInfo, { title: '50%', text: 'Bounce rate', headingColor: '#9966ff' }), document.getElementById('little2'));
+ReactDOM.render(React.createElement(LittleInfo, { title: '28%', text: 'Searches', headingColor: '#ff5050' }), document.getElementById('little3'));
+ReactDOM.render(React.createElement(LittleInfo, { title: '140.5 kb', text: 'Traffic', headingColor: '#00cc00' }), document.getElementById('little4'));
+
+},{"./components/BigInfo.jsx":172,"./components/ListManager.jsx":175,"./components/LittleInfo.jsx":176,"./components/WeatherInfo.jsx":177,"react":171,"react-dom":29}]},{},[178]);
