@@ -19095,7 +19095,7 @@ var LeadCapture = React.createClass({
 
     onSubmit: function (e) {
         if (!this.refs.fieldEmail.state.valid) {
-            alert("You suck at filling out forms. Email is always required in a lead capture form. Dummy!");
+            alert("Email is always required in a lead capture form!");
         } else {
             //Send request to email host or server!
             var httpRequestBody = {
