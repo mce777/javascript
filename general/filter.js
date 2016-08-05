@@ -9,11 +9,10 @@ var animals = [
 
 // will only return what you filter
 var isDog = function(theanimal) {
-    return theanimal.species !== 'dog';
+    return theanimal.species === 'dog';
 }
 
 var dogs = animals.filter(isDog);
+
 console.log(dogs);
 
-// var nodogs = animals.reject(isDog);
-// console.log(nodogs);
