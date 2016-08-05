@@ -7,6 +7,7 @@ function async test() {
     return await value();
 }
 
+// and then a simple try/catch
 try {
     const result = await test();
 } catch (e) {
