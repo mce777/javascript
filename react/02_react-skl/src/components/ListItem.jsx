@@ -1,6 +1,6 @@
 var React = require('react');
 
-var ListeItem = React.createClass({
+var ListItem = React.createClass({
   render: function() {
     return (
       <li>
@@ -10,4 +10,4 @@ var ListeItem = React.createClass({
   }
 });
 
-module.exports = ListeItem;
+module.exports = ListItem;
